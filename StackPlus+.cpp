@@ -4,15 +4,49 @@
 #include <iostream>
 using namespace std;
 
-int Stack[12], top;
+int STACK[12], top;
 
+void push(int[], int);
 
+void pop(int[], int);
+void display(int[]);
 
 
 
 int main()
 {
-    
+    cout << "Stack Menu" << endl;
+    cout << "1 = display" << endl;
+    cout << "2 = push" << endl;
+    cout << "3 = pop" << endl;
+    cout << "4 = exit" << endl;
+}
+
+void push(int stack[], int item)
+{
+    top++;
+    stack[top] = item;
+}
+
+void pop(int stack[]) {
+    int deletedItem;
+    if (top == -1)
+    {
+        cout << "stack is empty" << endl;
+    }
+    else {
+        deletedItem = stack[top];
+        top--;
+        cout << "Deleted  " << deletedItem;
+    }
+}
+
+void display(int stack[])
+{
+    for (i = top - 1; i >= 0; i--) 
+    {
+        cout << stack[i];
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
